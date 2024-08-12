@@ -1,14 +1,14 @@
 <div align = "center">
 
-# TypeRush - Typing Speed Test
+# ⌨️ TypeRush - Typing Speed Test
 
 TypeRush is a minimalistic website designed to test your typing speed. It provides a simple and intuitive interface for users to practice and improve their typing skills.
 
-![React](https://img.shields.io/badge/React-17.0.2-blue)
+![React](https://img.shields.io/badge/React-17.0.2-violet)
 ![TypeScript](https://img.shields.io/badge/TypeScript-4.3.5-blue)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-2.2.15-blue)
-![Framer Motion](https://img.shields.io/badge/Framer%20Motion-4.1.17-blue)
-![Firebase](https://img.shields.io/badge/Firebase-9.1.0-blue)
+![Framer Motion](https://img.shields.io/badge/Framer%20Motion-4.1.17-red)
+![Firebase](https://img.shields.io/badge/Firebase-9.1.0-yellow)
 
 <img src = "./assets/image.png" width ="70%" >
 
