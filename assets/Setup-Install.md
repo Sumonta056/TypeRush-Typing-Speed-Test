@@ -13,3 +13,5 @@ npm install classnames
 npm install react-icons --save
 
 npm i @ndaidong/txtgen
+
+![alt text](image.png)

@@ -43,6 +43,7 @@ const Character = ({
         "text-cyan-400": isCorrect && !isWhiteSpace,
         "text-red-400": !isCorrect && !isWhiteSpace,
         "bg-red-500/50": !isCorrect && isWhiteSpace,
+        "text-justify":true
       })}
     >
       {expected}

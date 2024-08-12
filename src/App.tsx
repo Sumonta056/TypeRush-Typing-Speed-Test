@@ -5,7 +5,7 @@ import useEngine from "./hooks/useEngine";
 import { calculateAccuracyPercentage } from "./utils/helpers";
 
 const App = () => {
-  const { state, words, timeLeft, typed, restart, errors, totalTyped,wpm } =
+  const { state, words, timeLeft, typed, restart, errors, totalTyped, wpm } =
     useEngine();
   return (
     <div className="p-16 mx-auto">
@@ -30,7 +30,6 @@ const App = () => {
         wpms={wpm}
         className={"mt-10"}
       />
-      
     </div>
   );
 };
