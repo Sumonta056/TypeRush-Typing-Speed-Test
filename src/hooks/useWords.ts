@@ -1,5 +1,7 @@
 import { paragraph } from "@ndaidong/txtgen";
 import { useCallback, useState } from "react";
+// import { faker } from "@faker-js/faker";
+// const words = faker.random.words(10);
 
 const generateWords = (count: number) => {
   return paragraph(count);

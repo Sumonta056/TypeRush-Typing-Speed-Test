@@ -1,29 +1,36 @@
-// import { faker } from "@faker-js/faker";
-// const words = faker.random.words(10);
 import RestartButton from "./components/RestartButton";
 import Result from "./components/Result";
 import UserTyping from "./components/UserTyping";
 import useEngine from "./hooks/useEngine";
+import { calculateAccuracyPercentage } from "./utils/helpers";
 
 const App = () => {
-  const { state, words } = useEngine();
+  const { state, words, timeLeft, typed, restart, errors, totalTyped,wpm } =
+    useEngine();
   return (
     <div className="p-16 mx-auto">
-      <CoundownTimer timeleft={60} />
+      <CoundownTimer timeleft={timeLeft} />
       <WordsContainer>
         <GeneratesWords words={words} />
-        <UserTyping userInput={words} className="absolute inset-0" />
+        <UserTyping
+          words={words}
+          userInput={typed}
+          className="absolute inset-0"
+        />
       </WordsContainer>
       <RestartButton
-        onRestart={() => console.log("Restarted")}
+        onRestart={restart}
         className={"mx-auto mt-10 text-slate-500"}
       />
       <Result
-        errors={10}
-        accuracyPercentage={90}
-        total={100}
+        state={state}
+        errors={errors}
+        accuracyPercentage={calculateAccuracyPercentage(errors, totalTyped)}
+        total={totalTyped}
+        wpms={wpm}
         className={"mt-10"}
       />
+      
     </div>
   );
 };

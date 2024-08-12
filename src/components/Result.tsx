@@ -1,21 +1,29 @@
 import { motion } from "framer-motion";
-import { format } from "path";
+import { State } from "../hooks/useEngine";
 import { formatPercentage } from "../utils/helpers";
 
 const Result = ({
+  state,
   errors,
   accuracyPercentage,
   total,
+  wpms,
   className,
 }: {
+  state: State;
   errors: number;
   accuracyPercentage: number;
   total: number;
+  wpms: number;
   className?: string;
 }) => {
   const initial = { opacity: 0 };
   const animate = { opacity: 1 };
   const duration = { duration: 0.3 };
+
+  if (state !== "finish") {
+    return null;
+  }
   return (
     <motion.ul
       className={`flex flex-col items-center text-teal-400 space-y-3 ${className}`}
@@ -23,10 +31,10 @@ const Result = ({
       <motion.li
         initial={initial}
         animate={animate}
-        transition={{ ...duration, delay: 0 }}
-        className="text-xl font-semibold"
+        transition={{ ...duration, delay: 2.0 }}
+        className="text-rose-500 text-3xl font-semibold"
       >
-        Results
+        {wpms} WPM
       </motion.li>
       <motion.li
         initial={initial}
