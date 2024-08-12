@@ -18,7 +18,7 @@ const RestartButton = ({
       className={`block rounded px-8 py-2 hover:bg-slate-700/50 ${className}`}
       onClick={handleClick}
     >
-      <MdRefresh />
+      <MdRefresh size={30} />
     </button>
   );
 };
